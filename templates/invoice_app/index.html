@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+
+{% extends 'invoice_app/base.html' %}
+
+
+{% block body_block %}
+
+{% load staticfiles %}
+
+<img src="{% static 'images/shop_1.jpg' %}"  >
+
+<div class="text-left">
+    <h1 style = "font-family: 'East Sea Dokdo', cursive" >Registered Items</h1>
+    
+</div>
+
+<br>
+<br>
+
+<!-- <h1 style= "font-family: system-ui" class = "form-style" > {{text1}} </h1> -->
+
+<div class = "form-style" >
+
+    <table class = "styled-table">
+    
+        <thead>
+            <tr>
+                <th>Item Id</th>
+                <th>Item Name</th>
+                <th>Item Catagory</th>
+                <th>Item Price </th>
+              
+            </tr>
+        </thead>
+    
+        <tbody>
+            
+            {% if food_list %}
+        
+            {% for row in food_list %}
+        
+            <tr>
+                <td>{{ row.id }}</td>
+                <td>{{ row.item_name }}</td>
+                <td>{{ row.item_catagory }}</td>
+                <td>{{ row.item_price }}</td>
+               
+            </tr>
+        
+            {% endfor %}
+        
+            {% else %}
+        
+            <h1> No Item in the list</h1>
+        
+            {% endif %}
+        </tbody>
+        
+        
+    </table>
+    
+    <a href="/form/"><button type="button" class="btn btn-outline-success" >Add Items </button>
+    </a>
+    
+
+
+
+</div>
+
+
+{% endblock %}
+
+
+
+
+
+
+

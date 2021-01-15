@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+{% extends 'invoice_app/base.html' %}
+
+{% block body_block %}
+
+{% load staticfiles %}
+
+<img src="{% static 'images/shop_1.jpg' %}"  >
+<div class="text-left">
+    <h1 style = "font-family: 'East Sea Dokdo', cursive" >Register New Items below</h1>
+    
+</div>
+
+<br>
+
+<br>
+
+<form action="" method= "POST" class = "form-style">
+
+    <!-- to organize from fields use as_p -->
+
+    {{ item_form.as_p }}
+
+    <!-- to submit a form csrf token is a must -->
+
+    {% csrf_token %}  
+
+
+    <button type="submit" name= "submit" class="btn btn-outline-success">Update</button>
+
+
+</form>
+
+
+{% endblock %}
+
+
+
