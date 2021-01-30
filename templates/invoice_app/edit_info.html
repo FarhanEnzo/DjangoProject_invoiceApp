@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+{% extends 'invoice_app/base.html' %}
+
+
+{% block body_block %}
+
+<div  class = "form-style"> 
+
+    <h1>Edit page</h1>
+
+    {% if update_text %}
+
+    <div class= 'alert alert-success' >
+
+        {{ update_text }}
+
+    </div>
+ 
+    {% endif %}
+
+    <form method='POST'>
+
+        {{edit_form.as_p}}
+        {% csrf_token %}
+
+        <button type="submit" name= "submit" class="btn btn-outline-success">Update</button>
+    </form>
+
+
+</div>
+
+
+
+
+
+{% endblock %}

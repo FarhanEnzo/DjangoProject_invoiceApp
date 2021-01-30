@@ -13,6 +13,8 @@ class EntryForm(forms.ModelForm):
 
 class OrderForm(forms.ModelForm):
 
+    sell_date = forms.DateField(widget=forms.TextInput(attrs={'type': 'date'}))
+
     class Meta:
         model = models.Item_sold
         fields = "__all__"

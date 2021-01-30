@@ -13,64 +13,48 @@
     <img src="{% static 'images/shop_2.jpg' %}"  >
 
     <div class="text-block">
-        <h1 style = "font-family: 'East Sea Dokdo', cursive" >Welcome to SHOPPINGHut</h1>
+        <!-- <h1 style = "font-family: 'East Sea Dokdo', cursive" >Welcome to SHOPPINGHut</h1> -->
+        <a href="{% url 'orderForm' %}" class="home_btn">
+          <span class="text">Text</span>
+          <span class="flip-front" style = "font-family: 'East Sea Dokdo', cursive " >Place Order</span>
+          <span class="flip-back" style = "font-family: 'East Sea Dokdo', cursive">Confirm</span>
+        </a>
         
     </div>
 
 
 </div>
 
+<footer >
 
-<footer class="site-footer">
+  <div class="container-fluid bg-primary py-3" >
     <div class="container">
-      <div class="row">
-        <div class="col-sm-12 col-md-6">
-          <h6>About</h6>
-          <p class="text-justify">Online shopping is a form of electronic commerce which allows consumers to directly buy goods or services from a seller over the Internet using a web browser or a mobile app. Consumers find a product of interest by visiting the website of the retailer directly or by searching among alternative vendors using a shopping search engine. As of 2020, customers can shop online using a range of different computers and devices, including desktop computers, laptops, tablet computers and smartphones.</p>
+      <div class="row py-3">
+        <div class="col-md-9">
+          <p class="text-white" style = "font-family: 'Yanone Kaffeesatz', sans-serif;
+          " >by Farhan AHmed</p>
         </div>
+        <div class="col-md-3">
+          <div class="d-inline-block">
+            <div class="bg-circle-outline d-inline-block">
+              <a href="https://www.facebook.com/" class="text-white"><i class="fa fa-2x fa-fw fa-facebook"></i>
+		</a>
+            </div>
 
-        <div class="col-xs-6 col-md-3">
-          <h6>Categories</h6>
-          <ul class="footer-links">
-            <li><a href="http://scanfcode.com/category/c-language/">Dress </a></li>
-            <li><a href="http://scanfcode.com/category/front-end-development/">Cosmetics</a></li>
-            <li><a href="http://scanfcode.com/category/back-end-development/">Shoes</a></li>
-            <li><a href="http://scanfcode.com/category/java-programming-language/">Jewelary</a></li>
-            <li><a href="http://scanfcode.com/category/android/">Perfume</a></li>
-            <li><a href="http://scanfcode.com/category/templates/">Watch</a></li>
-          </ul>
-        </div>
+            <div class="bg-circle-outline d-inline-block">
+              <a href="https://twitter.com/" class="text-white">
+                <i class="fa fa-2x fa-fw fa-twitter"></i></a>
+            </div>
 
-        <div class="col-xs-6 col-md-3">
-          <h6>Quick Links</h6>
-          <ul class="footer-links">
-            <li><a href="http://scanfcode.com/about/">About Us</a></li>
-            <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
-            <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
-            <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
-            <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
-          </ul>
-        </div>
-      </div>
-      <hr>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 col-sm-6 col-xs-12">
-          <p class="copyright-text">Copyright &copy; 2021  by Farhan Ahmed
-          </p>
-        </div>
-
-        <div class="col-md-4 col-sm-6 col-xs-12">
-          <ul class="social-icons">
-            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
-          </ul>
+            <div class="bg-circle-outline d-inline-block">
+              <a href="https://www.linkedin.com/company/" class="text-white">
+                <i class="fa fa-2x fa-fw fa-linkedin"></i></a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+  </div>
 </footer>
 
 

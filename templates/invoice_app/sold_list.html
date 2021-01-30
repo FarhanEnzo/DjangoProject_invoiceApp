@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+{% extends 'invoice_app/base.html' %}
+
+
+{% block body_block %}
+
+
+<div class = "form-style">
+
+<h1>sold list</h1>
+
+<h4> Item Name : {{food_info.item_name}}</h4>
+<h4> Item Catagory : {{food_info.item_catagory}}</h4>
+<h4> Item Price : {{food_info.item_price}}</h4>
+
+
+<table class = "styled-table">
+    
+    <thead>
+        <tr>
+
+            <th>Item Quantity</th>
+            <th>Sell Date</th>
+          
+        </tr>
+    </thead>
+
+    <tbody>
+        
+        {% for soldInfo in sold_info %}
+
+        <tr>
+
+            <td>Item quantity : {{ soldInfo.item_quantity }}</td>
+            <td>Sold date :{{ soldInfo.sell_date|date:"M d, Y" }}</td>
+
+        </tr>
+
+        {% endfor %}
+
+    </tbody>
+    
+</table>
+
+
+<a href="{% url 'edit_info' food_id=food_info.id %}"><button type="button" class="btn btn-outline-success" >Edit</button> </a>
+
+
+</div>
+
+
+{% endblock %}
+

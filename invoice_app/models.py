@@ -1,14 +1,15 @@
 from django.db import models
 
+
 class Item_entry(models.Model):
 
     item_name = models.CharField(max_length= 100)
     item_catagory = models.CharField(max_length= 100)
     item_price = models.IntegerField(default=0)
 
-    def __srt__(self):
+    def __str__(self):
 
-        return self.item_name + self.item_catagory 
+        return self.item_name + " - (" + self.item_catagory + ")" 
 
 
 class Item_sold(models.Model):
@@ -17,6 +18,9 @@ class Item_sold(models.Model):
     item_quantity = models.IntegerField(default=0)
  
     sell_date = models.DateField()
+
+    def __str__(self):
+        return self.item_quantity 
 
 
     # rating_options = (
